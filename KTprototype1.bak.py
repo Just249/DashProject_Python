@@ -27,6 +27,24 @@ df['binnedAge'] = pd.cut(df['Age'],bins=age_bins,labels=age_bins_labels)
 ################################
 ## Define Charts
 
+def age_sleepeff_line():
+    chart = alt.Chart(df).mark_line().encode(
+        x = 'binnedAge',
+        y=alt.Y('mean(Sleep efficiency)',scale=alt.Scale(zero=False)),
+        color = 'Gender'
+    )
+    return chart.to_html()
+
+def age_sleepdur_bar():
+    chart = alt.Chart(df).mark_bar().encode(
+        x = alt.X('Gender',title=None),
+        y = alt.Y('mean(Sleep duration)',scale=alt.Scale(zero=False),axis=alt.Axis(grid=False)),
+        color = alt.Color('Gender',legend=alt.Legend(orient='top')),
+        column='binnedAge'
+    ).configure_view(
+        stroke='transparent'
+    )
+    return chart.to_html()
 
 def awakening_bar():
     chart = alt.Chart(df).mark_bar().encode(
@@ -78,7 +96,7 @@ app.layout = html.Div([
                 html.Br(),
                 html.Iframe(
                     id = 'age_sleepeff',
-#                    srcDoc=age_sleepeff_line(),
+                    srcDoc=age_sleepeff_line(),
                     style={'height':'500px','width':'400px'}
                 )],style={'width': '38%', 'display': 'inline-block'}
             ),
@@ -88,7 +106,7 @@ app.layout = html.Div([
                 'Right Top Right Section',
                 html.Iframe(
                     id = 'age_sleepdur',
-#                    srcDoc=age_sleepdur_bar(),
+                    srcDoc=age_sleepdur_bar(),
                     style={'height':'500px','width':'800px'} #,'float':'right', 'display': 'inline-block'}
                 )], style={'width': '58%','display': 'inline-block'}
             )]         
@@ -109,33 +127,16 @@ app.layout = html.Div([
 
 @app.callback(
     Output('age_sleepeff','srcDoc'),
-    Output('age_sleepdur','srcDoc'),
-    Output('awakening','srcDoc'),
 #    Output('check-input-value','children'),
     Input('smoke-status-input','value'))
 def update_output(smoke_status):
 #    return smoke_status
-    df_local = df[df['Smoking status'].isin(smoke_status)].copy()
-    age_sleepeff_line = alt.Chart(df_local).mark_line().encode(
+    chart = alt.Chart(df[df['Smoking status'].isin(smoke_status)]).mark_line().encode(
         x = 'binnedAge',
         y=alt.Y('mean(Sleep efficiency)',scale=alt.Scale(zero=False)),
         color = 'Gender'
     )
-    age_sleepdur_bar = alt.Chart(df_local).mark_bar().encode(
-        x = alt.X('Gender',title=None),
-        y = alt.Y('mean(Sleep duration)',scale=alt.Scale(zero=False),axis=alt.Axis(grid=False)),
-        color = alt.Color('Gender',legend=alt.Legend(orient='top')),
-        column='binnedAge'
-    ).configure_view(
-        stroke='transparent'
-    )
-    awakening_bar = alt.Chart(df_local).mark_bar().encode(
-        x = 'count()',
-        y = alt.Y('Awakenings:O'),
-        color = alt.Color('Gender')
-    )
-    
-    return age_sleepeff_line.to_html(), age_sleepdur_bar.to_html(), awakening_bar.to_html()
+    return chart.to_html()
 
 if __name__ == '__main__':
     app.run_server(debug=True)
