@@ -1,7 +1,7 @@
 Dash Sketch:
 
 Tab1:
-<img width="979" alt="image" src="https://user-images.githubusercontent.com/61757423/220831510-4557148b-f7bd-458c-b33c-98cbf2efb473.png">
+![image](https://user-images.githubusercontent.com/61757423/220833021-9431a3d6-04e8-469a-b4c1-dfeeef92fd37.png)
 
 Tab2:
-<img width="979" alt="image" src="https://user-images.githubusercontent.com/61757423/220831559-136178d2-254e-470d-abd4-2e65aa2b7229.png">
+![image](https://user-images.githubusercontent.com/61757423/220833031-102f7831-b810-41fb-81f4-7e775c6eca5a.png)
