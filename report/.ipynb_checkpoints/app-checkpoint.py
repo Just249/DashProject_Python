@@ -6,9 +6,10 @@ import altair as alt
 #from vega_datasets import data
 import pandas as pd
 import dash_bootstrap_components as dbc
+import os
 
-
-df = pd.read_csv('../data/Sleep_Efficiency.csv')
+df = pd.read_csv('Sleep_Efficiency.csv')
+# df = pd.read_csv('../data/Sleep_Efficiency.csv')
 
 # Handling NA, Strategy = replaced by mean
 
