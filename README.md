@@ -1,3 +1,11 @@
+herokuapp link: https://data551-dashproject-python.herokuapp.com/
+
+Note: For some reason I have to pay inorder to get it running, will showcase to TA/Teacher that it is working.
+
+Here is a screenshot of it:
+![image](https://user-images.githubusercontent.com/61757423/222994209-ba896e75-e038-413a-a6e4-0013946778cf.png)
+
+
 # Milestone 1 - Dashboard proposal
 ### Section 1: Motivation and Purpose of the dashboard
 
