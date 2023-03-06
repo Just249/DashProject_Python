@@ -30,12 +30,29 @@ Here is a screenshot of it:
 > Dean Winchester is a sleep researcher with the Canadian Ministry of Health and he wants to understand what factors lead to better sleep in order to educate doctors further on how to improve the sleep quality and duration of their patients. He wants to be able to explore the sleep data collected on subjects by measuring various different factors and conditions to identify variables that most affect sleep, especially how different genders measure on different kinds of sleeps and what affects it. When Dean comes to this dashboard, he will be able to see how the sleep duration, sleep efficiency and awakenings are spread among males and females. Furthermore, he will be able to see how many people in each gender are able to get REM, Deep or Light sleep by varying factor inputs mentioned in Section 2. This dashboard will be a very handy tool in bolstering the knowledge that researchers and doctors have regarding the science of sleep. Dean may find that consuming alcohol helps in getting a better quality sleep but only to a certain level. Or, he may find that caffeine consumption before sleep reduces the sleep duration and efficiency. By varying these factors for various subjects, Dean will be able to study, observe and notice variables that affect sleep the most and this will provide him further guidance on what kind of sleep related factors he should be looking into to go deeper into this research.
 
 
-Dash Sketch:
+# Dash Sketch:
 
-Tab1:
 
 ![image](https://user-images.githubusercontent.com/61757423/220833021-9431a3d6-04e8-469a-b4c1-dfeeef92fd37.png)
 
-Tab2:
-
 ![image](https://user-images.githubusercontent.com/61757423/220833031-102f7831-b810-41fb-81f4-7e775c6eca5a.png)
+
+# For users of the dashboard
+
+Sleep plays a vital role in everyone's life, and its quality, duration, and schedule are influenced by various external factors. Understanding how sleep is affected by external factors such as caffeine, drugs, and smoking is crucial. To facilitate this understanding, the proposal is to develop a dashboard that visually explores the sleep dataset from Kaggle. The dashboard will enable users to analyze the effects of different variables on sleep and compare the impact of these variables. The aim of this analysis is to answer questions regarding the impact of external factors on sleep patterns, including differences between genders, the effect of caffeine and smoking, and the relationship between REM sleep and sleep quality.
+
+# Things that can be improved among other things
+
+- From the pictures attached above of tab 1 and tab 2, we can see that the genders are put into groups using different colours. There is scope for future improvement to show the data by other categorical data like 'Smoke Status'
+- To see more statistics of the data like range, standard deviation, standard errors and confidence intervals, a new widget can be incorporated on the dash on which the user can see all the above mentioned values according to variables that he chooses using a dropdown or radio buttons, etc.
+- Any other sensible addition which helps improve the story telling part of the dataset is welcome.
+
+# How to get involved
+
+If you think you can help in any of the areas listed above (and we bet you can) or in any of the many areas that we haven't yet thought of (and here we're sure you can) then please check out our contributors' guidelines and join the madness.
+
+Please note that it's very important to us that we maintain a positive and supportive environment for everyone who wants to participate. When you join us we ask that you follow our code of conduct in all interactions both on and offline.
+
+
+
+
